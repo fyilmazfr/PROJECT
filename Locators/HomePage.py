@@ -23,6 +23,9 @@ class LoginPageLocators:
 
     ACCOUNT_HAS_BEEN_CREATED = "xpath=//p[@class='alert alert-success']"
 
+    ALERT_ERROR_MESSAGE = "xpath=//div[@class='alert alert-danger']"
+    
+
     
 
 
