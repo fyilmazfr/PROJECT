@@ -24,6 +24,14 @@ class LoginPageLocators:
     ACCOUNT_HAS_BEEN_CREATED = "xpath=//p[@class='alert alert-success']"
 
     ALERT_ERROR_MESSAGE = "xpath=//div[@class='alert alert-danger']"
+
+    LOGIN_EMAIL_BUTTON = "xpath=//input[@id='email']"
+
+    LOGIN_PASSWORD_BUTTON = "xpath=//input[@id='passwd']"
+
+    Forgot_your_password = "xpath=//a[@title='Recover your forgotten password']"
+
+    SIGN_IN = "xpath=//*[@id='SubmitLogin']"
     
 
     
