@@ -33,6 +33,7 @@ steps:
 
   - task: PublishPipelineArtifact@1
     inputs:
-      targetPath: 'results'
-      artifact: 'TestResults'
+      targetPath: 'results/log.html'
+      artifact: 'TestLog'
       publishLocation: 'pipeline'
+    displayName: 'Publish Robot Framework Log'
