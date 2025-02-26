@@ -23,7 +23,12 @@ steps:
     displayName: 'Prepare Results Folder'
 
   - script: |
-      robot -d results tests/
+      ls -la
+      ls -la tests/
+    displayName: 'Check Directory Structure'
+
+  - script: |
+      robot -d results $(System.DefaultWorkingDirectory)/tests/
     displayName: 'Run Robot Tests'
 
   - task: PublishPipelineArtifact@1
