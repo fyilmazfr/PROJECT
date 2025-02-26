@@ -1,11 +1,11 @@
 trigger:
-  - main  # Veya test branch'ını yaz
+  - main
 
 pool:
-  vmImage: 'ubuntu-latest'  # Linux ortamında çalıştır
+  vmImage: 'ubuntu-latest'
 
 steps:
-  - checkout: self  # GitHub reposunu al
+  - checkout: self
 
   - task: UsePythonVersion@0
     inputs:
@@ -18,6 +18,11 @@ steps:
     displayName: 'Install Robot Framework & Dependencies'
 
   - script: |
+      mkdir -p results
+      chmod 777 results
+    displayName: 'Prepare Results Folder'
+
+  - script: |
       robot -d results tests/
     displayName: 'Run Robot Tests'
 
@@ -26,4 +31,3 @@ steps:
       targetPath: 'results'
       artifact: 'TestResults'
       publishLocation: 'pipeline'
-
