@@ -32,6 +32,10 @@ class LoginPageLocators:
     Forgot_your_password = "xpath=//a[@title='Recover your forgotten password']"
 
     SIGN_IN = "xpath=//*[@id='SubmitLogin']"
+
+    FACEBOOK= "xpath=//li[@class='facebook']"
+
+    TWETTER= "xpath=//li[@class='twitter']"
     
 
     
