@@ -1,0 +1,25 @@
+'''
+*** Variables ***
+&{USER}    name=Fatih    age=30    city=Paris
+
+*** Test Cases ***
+Print User Info
+    Log    Name: ${USER.name}
+    Log    Age: ${USER.age}
+    Log    City: ${USER.city}
+
+
+=====================================
+
+Birden Fazla Argument
+
+*** Keywords ***
+Add Numbers
+    [Arguments]    ${a}    ${b}
+    ${result}=    Evaluate    ${a} + ${b}
+    Log    Result is ${result}
+
+
+
+
+'''

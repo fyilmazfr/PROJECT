@@ -1,0 +1,17 @@
+'''
+&{Dictionary}, key-value çiftlerini saklamak ve düzenli veri yönetmek için çok kullanışlıdır.
+&{Dictionary} yapısı, sözlük (dictionary) yani anahtar-değer (key-value) çiftlerini tutan bir veri yapısıdır.
+*** Variables ***
+&{user}    name=Fatih    role=Tester    age=35
+
+
+
+
+
+
+
+
+
+
+
+'''

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2 (Python 3.13.1 on win32)" generated="2025-04-10T09:54:46.348888" rpa="false" schemaversion="5">
+<suite id="s1" name="US001" source="C:\Users\fthyl\OneDrive\PROJECT\Tests\US001.robot">
+<test id="s1-t1" name="TC001 Open Automation Practice Website" line="11">
+<kw name="Open Browser To Application" owner="reusable_keywords">
+<msg time="2025-04-10T09:54:47.363771" level="TRACE">Arguments: [ ${url}='http://www.automationpractice.pl/index.php' | ${browser}='chrome' ]</msg>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-04-10T09:54:47.365164" level="TRACE">Arguments: [ 'http://www.automationpractice.pl/index.php' | 'chrome' ]</msg>
+<msg time="2025-04-10T09:54:47.365364" level="INFO">Opening browser 'chrome' to base url 'http://www.automationpractice.pl/index.php'.</msg>
+<msg time="2025-04-10T09:54:47.370126" level="DEBUG">Selenium Manager binary found at: C:\Users\fthyl\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe</msg>
+<msg time="2025-04-10T09:54:47.370490" level="DEBUG">Executing process: C:\Users\fthyl\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --language-binding python --output json</msg>
+<msg time="2025-04-10T09:54:54.619207" level="DEBUG">Driver path: C:\Users\fthyl\.cache\selenium\chromedriver\win64\135.0.7049.84\chromedriver.exe</msg>
+<msg time="2025-04-10T09:54:54.619402" level="DEBUG">Browser path: C:\Program Files\Google\Chrome\Application\chrome.exe</msg>
+<msg time="2025-04-10T09:54:54.930328" level="DEBUG">Started executable: `C:\Users\fthyl\.cache\selenium\chromedriver\win64\135.0.7049.84\chromedriver.exe` in a child process with pid: 13304 using 0 to output -3</msg>
+<msg time="2025-04-10T09:54:55.462463" level="DEBUG">POST http://localhost:59375/session {'capabilities': {'firstMatch': [{}], 'alwaysMatch': {'browserName': 'chrome', 'pageLoadStrategy': &lt;PageLoadStrategy.normal: 'normal'&gt;, 'browserVersion': None, 'goog:chromeOptions': {'extensions': [], 'binary': 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe', 'args': []}}}}</msg>
+<msg time="2025-04-10T09:54:55.463258" level="DEBUG">Starting new HTTP connection (1): localhost:59375</msg>
+<msg time="2025-04-10T09:55:01.048561" level="DEBUG">http://localhost:59375 "POST /session HTTP/1.1" 200 0</msg>
+<msg time="2025-04-10T09:55:01.048844" level="DEBUG">Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"135.0.7049.42","chrome":{"chromedriverVersion":"135.0.7049.84 (6c019e56001911b3fd467e03bf68c435924d62f4-refs/branch-heads/7049@{#1778})","userDataDir":"C:\\Users\\fthyl\\AppData\\Local\\Temp\\scoped_dir13304_968490348"},"fedcm:accounts":true,"goog:chromeOptions":{"debuggerAddress":"localhost:59382"},"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"windows","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:extension:minPinLength":true,"webauthn:extension:prf":true,"webauthn:virtualAuthenticators":true},"sessionId":"7378e913d4a00c3eb51afb8e1bdaf1e5"}} | headers=HTTPHeaderDict({'Content-Length': '881', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2025-04-10T09:55:01.049034" level="DEBUG">Finished Request</msg>
+<msg time="2025-04-10T09:55:01.049720" level="DEBUG">POST http://localhost:59375/session/7378e913d4a00c3eb51afb8e1bdaf1e5/timeouts {'script': 5000}</msg>
+<msg time="2025-04-10T09:55:01.052864" level="DEBUG">http://localhost:59375 "POST /session/7378e913d4a00c3eb51afb8e1bdaf1e5/timeouts HTTP/1.1" 200 0</msg>
+<msg time="2025-04-10T09:55:01.053211" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2025-04-10T09:55:01.053371" level="DEBUG">Finished Request</msg>
+<msg time="2025-04-10T09:55:01.053636" level="DEBUG">POST http://localhost:59375/session/7378e913d4a00c3eb51afb8e1bdaf1e5/timeouts {'implicit': 0}</msg>
+<msg time="2025-04-10T09:55:01.055286" level="DEBUG">http://localhost:59375 "POST /session/7378e913d4a00c3eb51afb8e1bdaf1e5/timeouts HTTP/1.1" 200 0</msg>
+<msg time="2025-04-10T09:55:01.055551" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2025-04-10T09:55:01.055704" level="DEBUG">Finished Request</msg>
+<msg time="2025-04-10T09:55:01.055929" level="DEBUG">POST http://localhost:59375/session/7378e913d4a00c3eb51afb8e1bdaf1e5/timeouts {'pageLoad': 300000}</msg>
+<msg time="2025-04-10T09:55:01.060194" level="DEBUG">http://localhost:59375 "POST /session/7378e913d4a00c3eb51afb8e1bdaf1e5/timeouts HTTP/1.1" 200 0</msg>
+<msg time="2025-04-10T09:55:01.060514" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2025-04-10T09:55:01.060680" level="DEBUG">Finished Request</msg>
+<msg time="2025-04-10T09:55:01.060920" level="DEBUG">POST http://localhost:59375/session/7378e913d4a00c3eb51afb8e1bdaf1e5/url {'url': 'http://www.automationpractice.pl/index.php'}</msg>
+<msg time="2025-04-10T09:55:03.125863" level="DEBUG">http://localhost:59375 "POST /session/7378e913d4a00c3eb51afb8e1bdaf1e5/url HTTP/1.1" 200 0</msg>
+<msg time="2025-04-10T09:55:03.126115" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2025-04-10T09:55:03.126252" level="DEBUG">Finished Request</msg>
+<msg time="2025-04-10T09:55:03.126343" level="DEBUG">Opened browser with session id 7378e913d4a00c3eb51afb8e1bdaf1e5.</msg>
+<msg time="2025-04-10T09:55:03.126452" level="TRACE">Return: 1</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-04-10T09:54:47.364874" elapsed="15.761681"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<msg time="2025-04-10T09:55:03.127082" level="TRACE">Arguments: [  ]</msg>
+<msg time="2025-04-10T09:55:03.127311" level="DEBUG">POST http://localhost:59375/session/7378e913d4a00c3eb51afb8e1bdaf1e5/window/maximize {}</msg>
+<msg time="2025-04-10T09:55:03.280275" level="DEBUG">http://localhost:59375 "POST /session/7378e913d4a00c3eb51afb8e1bdaf1e5/window/maximize HTTP/1.1" 200 0</msg>
+<msg time="2025-04-10T09:55:03.280656" level="DEBUG">Remote response: status=200 | data={"value":{"height":688,"width":1296,"x":-8,"y":-8}} | headers=HTTPHeaderDict({'Content-Length': '51', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2025-04-10T09:55:03.280817" level="DEBUG">Finished Request</msg>
+<msg time="2025-04-10T09:55:03.281050" level="TRACE">Return: None</msg>
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-04-10T09:55:03.126940" elapsed="0.154262"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<msg time="2025-04-10T09:55:03.282915" level="TRACE">Arguments: [ datetime.timedelta(microseconds=500000) ]</msg>
+<msg time="2025-04-10T09:55:03.283697" level="TRACE">Return: '0 seconds'</msg>
+<arg>0.5</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2025-04-10T09:55:03.282066" elapsed="0.002373"/>
+</kw>
+<msg time="2025-04-10T09:55:03.284916" level="TRACE">Return: None</msg>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<status status="PASS" start="2025-04-10T09:54:47.362797" elapsed="15.922265"/>
+</kw>
+<doc>Open the website and verify the page title.</doc>
+<status status="PASS" start="2025-04-10T09:54:47.361551" elapsed="15.930396"/>
+</test>
+<status status="PASS" start="2025-04-10T09:54:46.353291" elapsed="16.942642"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="US001" id="s1" pass="1" fail="0" skip="0">US001</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

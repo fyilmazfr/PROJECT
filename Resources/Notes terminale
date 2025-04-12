@@ -1,0 +1,35 @@
+'''
+Terminalde;
+===> robot -d Output --loglevel TRACE tests\TestCase1.robot
+       robot: Robot Framework testlerini çalıştıran komut.
+
+-d Output: -d = output directory (çıktı klasörü).
+
+Output adında bir klasör oluşturur (eğer yoksa).
+
+log.html, report.html, output.xml gibi dosyaları bu klasöre kaydeder.
+
+--loglevel TRACE: Log seviyesini belirtir.
+
+TRACE en detaylı seviyedir (DEBUG’dan da detaylı).
+
+Adım adım her işlemi görmek istersin, bu seviye işine yarar.
+
+Diğer seviyeler: INFO, DEBUG, WARN, NONE.
+
+tests\TestCase1.robot:
+
+Çalıştırılacak test dosyası.
+
+tests klasörü içindeki TestCase1.robot dosyasını çalıştırır.
+
+===============================
+
+===> robot -d "Output\$(Get-Date -Format yyyy-MM-dd_HH-mm-ss)" tests\TestCase1.robot
+bunu terminalde yada pythonda bir koda donusturup, import edersek her calisan kodu ayri raporlama verir ve output'un altina koyar
+$(Get-Date -Format yyyy-MM-dd_HH-mm-ss) → O anki tarih-saat (örneğin: 2025-04-10_14-32-18)
+
+"Output\..." → Her çalıştırmada Output klasörünün altında yeni bir klasör açar.
+
+Dosyaların üzerine yazılmaz, hepsi ayrı ayrı saklanır.
+'''

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2 (Python 3.13.1 on win32)" generated="2025-04-12T13:50:48.577653" rpa="false" schemaversion="5">
+<suite id="s1" name="US001" source="c:\Users\fthyl\OneDrive\PROJECT\API\TestsAPI\US001.robot">
+<test id="s1-t1" name="Get_Pet By ID" line="15">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-04-12T13:50:49.805412" level="INFO">Creating Session using : alias=demoqa, url=https://petstore.swagger.io, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>demoqa</arg>
+<arg>${base_url}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-04-12T13:50:49.803924" elapsed="0.017821"/>
+</kw>
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2025-04-12T13:50:50.390119" level="INFO">GET Request : url=https://petstore.swagger.io/v2/pet/123 
+ path_url=/v2/pet/123 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2025-04-12T13:50:50.391267" level="INFO">GET Response : url=https://petstore.swagger.io/v2/pet/123 
+ status=200, reason=OK 
+ headers={'Date': 'Sat, 12 Apr 2025 11:50:51 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Server': 'Jetty(9.2.9.v20150224)'} 
+ body={"id":123,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"} 
+ </msg>
+<msg time="2025-04-12T13:50:50.391935" level="INFO">C:\Users\fthyl\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'petstore.swagger.io'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2025-04-12T13:50:50.402286" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>demoqa</arg>
+<arg>/v2/pet/123</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-04-12T13:50:49.827844" elapsed="0.575370"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<msg time="2025-04-12T13:50:50.408479" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${response.status_code}</arg>
+<arg>200</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-04-12T13:50:50.406203" elapsed="0.003175"/>
+</kw>
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2025-04-12T13:50:50.415219" level="INFO">${body} = {"id":123,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}</msg>
+<var>${body}</var>
+<arg>${response.content}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2025-04-12T13:50:50.412924" elapsed="0.002734"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${body}</arg>
+<arg>category</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-04-12T13:50:50.419447" elapsed="0.001071"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-04-12T13:50:50.426331" level="INFO">${contentTypeValue} = application/json</msg>
+<var>${contentTypeValue}</var>
+<arg>${response.headers}</arg>
+<arg>Content-Type</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-04-12T13:50:50.424580" elapsed="0.002200"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${contentTypeValue}</arg>
+<arg>application/json</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-04-12T13:50:50.431062" elapsed="0.001265"/>
+</kw>
+<status status="PASS" start="2025-04-12T13:50:49.801787" elapsed="0.634663"/>
+</test>
+<status status="PASS" start="2025-04-12T13:50:48.589362" elapsed="1.850966"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="US001" id="s1" pass="1" fail="0" skip="0">US001</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
