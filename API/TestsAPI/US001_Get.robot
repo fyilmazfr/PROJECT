@@ -1,6 +1,6 @@
 *** Settings ***
 Library           RequestsLibrary
-Library    Collections
+Library    Collections     #json objelerini cevirmek icin ideal eklenmeli
 
 
 
