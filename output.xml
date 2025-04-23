@@ -1,68 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2 (Python 3.13.1 on win32)" generated="2025-04-12T15:27:05.421537" rpa="false" schemaversion="5">
-<suite id="s1" name="US002 Post" source="c:\Users\fthyl\OneDrive\PROJECT\API\TestsAPI\US002_Post.robot">
-<test id="s1-t1" name="TC001 Post Requests" line="32">
+<robot generator="Robot 7.2 (Python 3.13.1 on win32)" generated="2025-04-23T10:35:02.145591" rpa="false" schemaversion="5">
+<suite id="s1" name="US005" source="c:\Users\fthyl\OneDrive\PROJECT\API\TestsAPI\US005.robot">
+<test id="s1-t1" name="Get_countryInfo" line="17">
 <kw name="Create Session" owner="RequestsLibrary">
-<msg time="2025-04-12T15:27:06.704378" level="INFO">Creating Session using : alias=YeniKayit, url=https://petstore.swagger.io, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
-<arg>YeniKayit</arg>
-<arg>${base_url}</arg>
+<msg time="2025-04-23T10:35:03.493320" level="INFO">Creating Session using : alias=ulkeIsim, url=https://restcountries.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>ulkeIsim</arg>
+<arg>${BASE_URL}</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2025-04-12T15:27:06.703354" elapsed="0.006953"/>
+<status status="PASS" start="2025-04-23T10:35:03.492423" elapsed="0.007302"/>
 </kw>
-<kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2025-04-12T15:27:06.724591" level="INFO">${headers} = {'Content-Type': 'application/json', 'accept': 'application/json'}</msg>
-<var>${headers}</var>
-<arg>Content-Type=application/json</arg>
-<arg>accept=application/json</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2025-04-12T15:27:06.722310" elapsed="0.003480"/>
-</kw>
-<kw name="POST On Session" owner="RequestsLibrary">
-<msg time="2025-04-12T15:27:08.877244" level="INFO">POST Request : url=https://petstore.swagger.io/v2/pet 
- path_url=/v2/pet 
- headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'accept': 'application/json', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Content-Length': '163'} 
- body={ "id": 0, "category": { "id": 0, "name": "string" }, "name": "doggie", "photoUrls": ["string"], "tags": [ { "id": 0, "name": "string" } ], "status": "available" } 
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2025-04-23T10:35:03.894472" level="INFO">GET Request : url=https://restcountries.com/v3.1/name/deutschland 
+ path_url=/v3.1/name/deutschland 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
  </msg>
-<msg time="2025-04-12T15:27:08.877772" level="INFO">POST Response : url=https://petstore.swagger.io/v2/pet 
+<msg time="2025-04-23T10:35:03.895178" level="INFO">GET Response : url=https://restcountries.com/v3.1/name/deutschland 
  status=200, reason=OK 
- headers={'Date': 'Sat, 12 Apr 2025 13:27:09 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Server': 'Jetty(9.2.9.v20150224)'} 
- body={"id":9223372036854775807,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"} 
+ headers={'Server': 'nginx/1.22.1', 'Date': 'Wed, 23 Apr 2025 08:35:03 GMT', 'Content-Type': 'application/json', 'Content-Length': '3431', 'Connection': 'keep-alive', 'Cache-Control': 'public, immutable, max-age=31556926'} 
+ body=[{"name":{"common":"Germany","official":"Federal Republic of Germany","nativeName":{"deu":{"official":"Bundesrepublik Deutschland","common":"Deutschland"}}},"tld":[".de"],"cca2":"DE","ccn3":"276","cioc":"GER","independent":true,"status":"officially-assigned","unMember":true,"currencies":{"EUR":{"symbol":"€","name":"Euro"}},"idd":{"root":"+4","suffixes":["9"]},"capital":["Berlin"],"altSpellings":["DE","Federal Republic of Germany","Bundesrepublik Deutschland"],"region":"Europe","subregion":"Western Europe","languages":{"deu":"German"},"latlng":[51.0,9.0],"landlocked":false,"borders":["AUT","BEL","CZE","DNK","FRA","LUX","NLD","POL","CHE"],"area":357114.0,"demonyms":{"eng":{"f":"German","m":"German"},"fra":{"f":"Allemande","m":"Allemand"}},"cca3":"DEU","translations":{"ara":{"official":"جمهورية ألمانيا الاتحادية","common":"ألمانيا"},"bre":{"official":"Republik Kevreadel Alamagn","common":"Alamagn"},"ces":{"official":"Spolková republika Německo","common":"Německo"},"cym":{"official":"Federal Republic of Germany","common":"Germany"},"deu":{"official":"Bundesrepublik Deutschland","common":"Deutschland"},"est":{"official":"Saksamaa Liitvabariik","common":"Saksamaa"},"fin":{"official":"Saksan liittotasavalta","common":"Saksa"},"fra":{"official":"République fédérale d'Allemagne","common":"Allemagne"},"hrv":{"official":"Njemačka Federativna Republika","common":"Njemačka"},"hun":{"official":"Német Szövetségi Köztársaság","common":"Németország"},"ind":{"official":"Republik Federal Jerman","common":"Jerman"},"ita":{"official":"Repubblica federale di Germania","common":"Germania"},"jpn":{"official":"ドイツ連邦共和国","common":"ドイツ"},"kor":{"official":"독일 연방 공화국","common":"독일"},"nld":{"official":"Bondsrepubliek Duitsland","common":"Duitsland"},"per":{"official":"جمهوری فدرال آلمان","common":"آلمان"},"pol":{"official":"Republika Federalna Niemiec","common":"Niemcy"},"por":{"official":"República Federal da Alemanha","common":"Alemanha"},"rus":{"official":"Федеративная Республика Германия","common":"Германия"},"slk":{"official":"Nemecká spolková republika","common":"Nemecko"},"spa":{"official":"República Federal de Alemania","common":"Alemania"},"srp":{"official":"Савезна Република Немачка","common":"Немачка"},"swe":{"official":"Förbundsrepubliken Tyskland","common":"Tyskland"},"tur":{"official":"Almanya Federal Cumhuriyeti","common":"Almanya"},"urd":{"official":"وفاقی جمہوریہ جرمنی","common":"جرمنی"},"zho":{"official":"德意志联邦共和国","common":"德国"}},"flag":"\uD83C\uDDE9\uD83C\uDDEA","maps":{"googleMaps":"https://goo.gl/maps/mD9FBMq1nvXUBrkv6","openStreetMaps":"https://www.openstreetmap.org/relation/51477"},"population":83240525,"gini":{"2016":31.9},"fifa":"GER","car":{"signs":["DY"],"side":"right"},"timezones":["UTC+01:00"],"continents":["Europe"],"flags":{"png":"https://flagcdn.com/w320/de.png","svg":"https://flagcdn.com/de.svg","alt":"The flag of Germany is composed of three equal horizontal bands of black, red and gold."},"coatOfArms":{"png":"https://mainfacts.com/media/images/coats_of_arms/de.png","svg":"https://mainfacts.com/media/images/coats_of_arms/de.svg"},"startOfWeek":"monday","capitalInfo":{"latlng":[52.52,13.4]},"postalCode":{"format":"#####","regex":"^(\\d{5})$"}}] 
  </msg>
-<msg time="2025-04-12T15:27:08.878082" level="INFO">C:\Users\fthyl\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'petstore.swagger.io'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+<msg time="2025-04-23T10:35:03.895675" level="INFO">C:\Users\fthyl\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'restcountries.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
   warnings.warn(</msg>
-<msg time="2025-04-12T15:27:08.878811" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<msg time="2025-04-23T10:35:03.896383" level="INFO">${response} = &lt;Response [200]&gt;</msg>
 <var>${response}</var>
-<arg>YeniKayit</arg>
+<arg>ulkeIsim</arg>
 <arg>${ENDPOINT}</arg>
-<arg>data=${PET_BODY}</arg>
-<arg>headers=${headers}</arg>
-<doc>Sends a POST request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2025-04-12T15:27:06.732406" elapsed="2.146719"/>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-04-23T10:35:03.502256" elapsed="0.394395"/>
 </kw>
-<kw name="Should Be Equal As Strings" owner="BuiltIn">
-<msg time="2025-04-12T15:27:08.882023" level="INFO">Argument types are:
-&lt;class 'int'&gt;
-&lt;class 'str'&gt;</msg>
-<arg>${response.status_code}</arg>
-<arg>200</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2025-04-12T15:27:08.880009" elapsed="0.002505"/>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-04-23T10:35:03.901494" level="INFO">${json_obj} = [{'name': {'common': 'Germany', 'official': 'Federal Republic of Germany', 'nativeName': {'deu': {'official': 'Bundesrepublik Deutschland', 'common': 'Deutschland'}}}, 'tld': ['.de'], 'cca2': 'DE', 'c...</msg>
+<var>${json_obj}</var>
+<arg>${response.json()}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-04-23T10:35:03.899585" elapsed="0.002325"/>
 </kw>
-<doc>Test to create a new post using POST request,yeni kayit yapacagiz</doc>
-<tag>Post_YeniKayit</tag>
-<status status="PASS" start="2025-04-12T15:27:06.693497" elapsed="2.191811"/>
+<kw name="Get Value From Json" owner="JSONLibrary">
+<msg time="2025-04-23T10:35:03.963738" level="INFO">${country_name_0} = ['Germany']</msg>
+<var>${country_name_0}</var>
+<arg>${json_obj}</arg>
+<arg>$[0].name.common</arg>
+<doc>Get Value From JSON using JSONPath</doc>
+<status status="PASS" start="2025-04-23T10:35:03.903138" elapsed="0.061099"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>First country: ${country_name_0}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-04-23T10:35:03.965631" elapsed="0.001567"/>
+</kw>
+<status status="PASS" start="2025-04-23T10:35:03.490308" elapsed="0.478005"/>
 </test>
-<status status="PASS" start="2025-04-12T15:27:05.438121" elapsed="3.450867"/>
+<status status="PASS" start="2025-04-23T10:35:02.162586" elapsed="1.808031"/>
 </suite>
 <statistics>
 <total>
 <stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">Post_YeniKayit</stat>
 </tag>
 <suite>
-<stat name="US002 Post" id="s1" pass="1" fail="0" skip="0">US002 Post</stat>
+<stat name="US005" id="s1" pass="1" fail="0" skip="0">US005</stat>
 </suite>
 </statistics>
 <errors>

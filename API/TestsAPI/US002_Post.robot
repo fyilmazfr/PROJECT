@@ -1,14 +1,14 @@
 *** Settings ***
 Library    RequestsLibrary
 Library    Collections
-Library    JSONLibrary
+
 
 
 *** Variables ***
 ${base_url}    https://petstore.swagger.io
 ${ENDPOINT}    /v2/pet
 
-${PET_BODY}             # "şunu kaydet, şunu oluştur"# post yaparken herzaman bir body gondermemiz gerek
+${PET_BODY}             
 ...    {
 ...        "id": 0,
 ...        "category": {
@@ -36,7 +36,7 @@ TC001 Post Requests
     Create Session    YeniKayit    ${base_url}       
     ${headers}=    Create Dictionary    Content-Type=application/json    accept=application/json
 
-    ${response}=     POST On Session  YeniKayit   ${ENDPOINT}   data=${PET_BODY}  headers=${headers}     #bu satir cok onemli 
+    ${response}=     POST On Session  YeniKayit   ${ENDPOINT}   data=${PET_BODY}  headers=${headers}     
                                                                 #data=<gönderilecek veri>    headers=<başlıklar>
       
   
