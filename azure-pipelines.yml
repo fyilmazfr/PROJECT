@@ -1,0 +1,32 @@
+trigger:
+- main  
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+jobs:
+- job: RunRobotTests
+  displayName: 'Run Robot Framework Tests'
+  steps:
+  - task: UsePythonVersion@0
+    inputs:
+      versionSpec: '3.10'
+      addToPath: true
+
+  - script: |
+      python -m pip install --upgrade pip
+      pip install -r requirements.txt
+    displayName: 'Install Dependencies'
+
+  - script: |
+      echo Running Robot Framework Tests
+      robot -d Results tests/
+    displayName: 'Run Robot Framework Tests'
+
+  - task: PublishBuildArtifacts@1
+    displayName: 'Publish Robot Framework Reports'
+    inputs:
+      PathtoPublish: 'Results'
+      ArtifactName: 'RobotFrameworkReports'
+      publishLocation: 'Container'
+    condition: succeededOrFailed()
