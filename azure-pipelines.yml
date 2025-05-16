@@ -19,7 +19,7 @@ jobs:
     displayName: 'Install Dependencies'
 
   - script: |
-      echo Running Robot Framework Tests
+      mkdir -p Results
       robot -d Results tests/
     displayName: 'Run Robot Framework Tests'
 
